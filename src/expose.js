@@ -1,4 +1,4 @@
-assign(Hammer, {
+assign(idxHammer, {
     INPUT_START: INPUT_START,
     INPUT_MOVE: INPUT_MOVE,
     INPUT_END: INPUT_END,
@@ -54,14 +54,14 @@ assign(Hammer, {
 // this prevents errors when Hammer is loaded in the presence of an AMD
 //  style loader but by script tag, not by the loader.
 var freeGlobal = (typeof window !== 'undefined' ? window : (typeof self !== 'undefined' ? self : {})); // jshint ignore:line
-freeGlobal.Hammer = Hammer;
+freeGlobal.idxHammer = idxHammer;
 
 if (typeof define === 'function' && define.amd) {
     define(function() {
-        return Hammer;
+        return idxHammer;
     });
 } else if (typeof module != 'undefined' && module.exports) {
-    module.exports = Hammer;
+    module.exports = idxHammer;
 } else {
-    window[exportName] = Hammer;
+    window[exportName] = idxHammer;
 }

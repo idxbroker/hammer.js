@@ -4,22 +4,22 @@
  * @param {Object} [options]
  * @constructor
  */
-function Hammer(element, options) {
+function idxHammer(element, options) {
     options = options || {};
-    options.recognizers = ifUndefined(options.recognizers, Hammer.defaults.preset);
+    options.recognizers = ifUndefined(options.recognizers, idxHammer.defaults.preset);
     return new Manager(element, options);
 }
 
 /**
  * @const {string}
  */
-Hammer.VERSION = '{{PKG_VERSION}}';
+idxHammer.VERSION = '{{PKG_VERSION}}';
 
 /**
  * default settings
  * @namespace
  */
-Hammer.defaults = {
+idxHammer.defaults = {
     /**
      * set if DOM events are being triggered.
      * But this is slower and unused by simple implementations, so disabled by default.

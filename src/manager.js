@@ -8,7 +8,7 @@ var FORCED_STOP = 2;
  * @constructor
  */
 function Manager(element, options) {
-    this.options = assign({}, Hammer.defaults, options || {});
+    this.options = assign({}, idxHammer.defaults, options || {});
 
     this.options.inputTarget = this.options.inputTarget || element;
 
